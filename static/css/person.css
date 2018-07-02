@@ -1,0 +1,108 @@
+.s_bottom table {
+	width: 80%;
+	float: left;
+	margin-left: 10%;
+	margin-top: 20px;
+	border: 1px solid #8785A2;
+	border-radius: 3px;
+}
+
+.s_bottom table th {
+	background: rgba(0, 153, 255, 0.6);
+	line-height: 30px;
+}
+
+.s_bottom table tr {
+	width: 100%;
+	height: auto;
+	line-height: 30px;
+}
+
+/*.ask{*/
+	/*font-size: 20px;*/
+/*}*/
+
+/*.ask1{*/
+	/*font-size: 18px;*/
+/*}*/
+
+.s_bottom table td {
+	text-align: center;
+	border: 0.5px solid #8785A2;
+}
+.s_bottom table td  h2{
+	line-height: 35px;
+}
+.title_q {
+	width: 16.6666%;
+}
+
+.student_q {
+	width: 16.6666%;
+}
+
+.state_q {
+	width: 16.6666%;
+}
+
+.time_q {
+	width: 16.6666%;
+}
+
+.bottom_b {
+	width: 80%;
+	height: 12%;
+	margin: 1% 10% 0.5% 10%;
+	float: none;
+}
+
+.span_href {
+	width: 14%;
+	height: 50%;
+	float: left;
+	line-height: 300%;
+	margin: 25px 18% 25px 18%;
+	text-align: center;
+	background: rgba(0, 153, 255, 0.5);
+	color: black;
+	border-radius: 3px;
+}
+
+#form_person {
+	width: 80%;
+	height: 570px;
+	margin-left: 10%;
+	margin-top: 20px;
+}
+
+#form_person table {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	border-radius: 3px;
+}
+
+#form_person tbody {
+	width: 100%;
+	width: 100%;
+}
+
+#form_person table tr {
+	width: 100%;
+	height: 12.5%;
+	/*background: coral;*/
+}
+
+#form_person table td {
+	width: 45%;
+}
+
+#form_person table th {
+	width: 10%;
+	border-radius: 5px;
+	background: #F5F7F9;
+}
+
+#form_person input {
+	background: #FFFFFF;
+}

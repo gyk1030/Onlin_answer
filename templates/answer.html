@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../static/css/base.css" />
+		<link rel="stylesheet" href="../static/css/main.css" />
+		<title>网上答疑系统-老师回答</title>
+	</head>
+
+	<body>
+		<div class="s_top">
+			<div class="s_top_menu">
+				<a href="#">
+					<h3>在 线 答 疑 系 统 — 
+						<span id="Title">老 师 回 答</span>
+					</h3>
+				</a>
+				<ul class="personC">
+					<a href="">
+						<li>{{ teacherName }}的个人中心</li>
+					</a>
+					<a href="{% url 'login_out' %}">
+						<li>注销</li>
+					</a>
+				</ul>
+			</div>
+		</div>
+		<div class="s_bottom">
+			<div id="ask_frame" style="display: block;">
+				<form id="form_ask" name="askFrom" action="" method="post">
+					<table>
+						<tr>
+							<th>概要</th>
+							<td>
+								<input type="text" readonly="readonly" min="3" max="28" placeholder="问题标题"  value="{{ ask_list.askTopic }}"/>
+							</td>
+						</tr>
+						<tr>
+							<th>问题内容</th>
+							<td>
+								<textarea name="ask_content" cols="60" rows="20" readonly="readonly" >{{ ask_list.askContent }}</textarea>
+							</td>
+						</tr>
+						<tr>
+							<th>问题分类</th>
+							<td>类型1</td>
+						</tr>
+						<tr>
+							<th>回答内容</th>
+							<td>
+								<textarea name="answerContent" cols="60" rows="20" required="required"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<button type="submit" id="login-button">提 交</button>
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<a href="{% url 'tea_search' %}">
+									<span class="btn_span">返回搜索</span>
+								</a>
+							</th>
+							<td  style="width:280px;float: right;margin-right:40px;" >
+								<a href="{% url 'teacher_index' %}" style="width:100%;text-align: right;color: dodgerblue;">
+								   返回个人主页
+								</a>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>
+
+</html>

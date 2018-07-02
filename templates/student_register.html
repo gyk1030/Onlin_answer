@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../static/css/base.css" />
+		<link rel="stylesheet" href="../static/css/main.css" />
+		<title>网上答疑系统-学生注册</title>
+	</head>
+
+	<body>
+		<div class=s_top>
+			<div class="s_top_menu">
+				<a href="login.html">
+					<h3>在 线 答 疑 系 统</h3></a>
+				<ul class="personC">
+					<a href="{% url "teacher_register" %}">
+						<li>老师注册</li>
+					</a>
+					<a href="{% url "login" %}">
+						<li>返回登录</li>
+					</a>
+				</ul>
+			</div>
+		</div>
+		<div id="register_frame">
+			<form id="student_re" name="studentRe" action="/student_register/" method="post">
+				<h3>学生注册</h3>
+				<table cellspacing="0">
+					<tr>
+						<th>用户名</th>
+						<td>
+							<input name="name" type="text" placeholder="输入用户名" />
+						</td>
+					</tr>
+					<tr>
+						<th>密码</th>
+						<td>
+							<input name="pwd" type="password" placeholder="输入密码" />
+						</td>
+					</tr>
+					<tr>
+						<th>密码确认</th>
+						<td>
+							<input name="rpwd" type="password" placeholder="重复密码" />
+						</td>
+					</tr>
+
+					<tr>
+						<th>邮箱</th>
+						<td>
+							<input name="Email" type="email" placeholder="输入邮箱" />
+						</td>
+					</tr>
+					<tr>
+						<th>学号</th>
+						<td>
+							<input name="id" type="text" id="myId" placeholder="输入学号" onblur="func1()"/>
+						</td>
+					</tr>
+					<tr>
+						<th>专业</th>
+						<td>
+{#                            学院:#}
+{#							<select>#}
+{#								<option value="电信学院">电信学院</option>#}
+{#								<option value="经贸学院">经贸学院</option>#}
+{#								<option value="会计学院">会计学院</option>#}
+{#							</select>#}
+
+							<select name="profession">
+								<option value="1">网络工程</option>
+                                <option value="2">计算机</option>
+								<option value="3">电气</option>
+								<option value="4">信工</option>
+								<option value="5">会计</option>
+								<option value="6">物流</option>
+							</select>
+					</tr>
+					<tr style="border-bottom: 0px;">
+						<td colspan="2"><button type="submit" id="register_button">确 认</button></td>
+					</tr>
+					<tr>
+						<th></th>
+						<td>
+							<a href="{% url "teacher_register" %}">老师注册</a>
+							<a href="{% url "login" %}">返回登录</a>
+						</td>
+					</tr>
+                    <tr>
+                        <span id="tip" style="color: green">{{ message }}</span>
+                        <span id="error" style="color: red">{{ tip }}</span>
+                    </tr>
+				</table>
+			</form>
+		</div>
+	</body>
+
+<script type="text/javascript" src="../static/js/jquery-3.3.1.min.js/"></script>
+<script>
+    function func1(){
+        test1();
+    }
+
+    function test1(){
+        console.log(111);
+
+        $.ajax({
+            url:"/register_auth/",
+            type:"POST",
+            data:{
+                user:"student",
+                id:$('#myId').val()
+            },
+            success:function(res){
+
+                if (res==1){
+                    console.log(321321);
+                    $('#error').show();
+                    $('#error').text('学号已被注册！');
+                }
+                if (res==0){
+                    $('#error').hide()
+
+                }
+            }
+       })
+    }
+
+</script>
+
+</html>

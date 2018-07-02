@@ -1,0 +1,185 @@
+* {
+	moz-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ktml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+*,
+body,
+img,
+h1,
+h2,
+h3,
+h5,
+p,
+ul,
+li,
+input {
+	margin: 0px;
+	padding: 0px;
+}
+
+a,
+h1,
+h3,
+li,
+ul,
+p {
+	cursor: pointer;
+}
+
+body {
+	/*background: urls(../img/bg05.jpg);*/
+	/*background: urls(../img/bg02.jpg);*/
+	background: rgba(245, 245, 245, 0.8);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+li {
+	list-style-type: none;
+	float: left;
+	overflow: hidden;
+}
+
+textarea {
+	border-radius: 3px;
+}
+
+
+/*横分界线*/
+
+.hr_ {
+	width: 90%;
+	height: 1px;
+	margin: 4px 5% 5.5px 5%;
+	float: left;
+	background: #8785A2;
+}
+
+
+/*竖分界线*/
+
+.hrI {
+	width: 1px;
+	height: 90px;
+	margin-top: 20px;
+	float: left;
+	background: #FFFFFF;
+}
+
+.s_top {
+	width: 100%;
+	height: 50px;
+	margin: 0px;
+	float: left;
+}
+
+.s_bottom {
+	width: 70%;
+	height: 800px;
+	margin-left: 15%;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	float: left;
+	border-radius: 3px;
+	background: rgba(245, 245, 245, 0.8);
+}
+
+.s_top_menu {
+	width: 100%;
+	height: 55px;
+	float: left;
+	background: rgba(0, 153, 255, 0.8);
+	overflow: hidden;
+}
+
+.s_top_menu h3 {
+	width: 450px;
+	height: 50px;
+	margin-left: 2%;
+	float: left;
+	font-size: 23px;
+	line-height: 48px;
+}
+
+.s_top_menu span {
+	font-size: 23px;
+	line-height: 48px;
+}
+
+.personC {
+	width: 20%;
+	height: 50px;
+	line-height: 50px;
+	float: right;
+}
+
+.personC li {
+	width: 50%;
+	line-height: 48px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.btn_span {
+	font-weight: 400;
+	color: dodgerblue;
+	float: right;
+}
+
+.btn_html {
+	width: 80px;
+	height: 60px;
+	color: white;
+	background-color: dodgerblue;
+,	text-align: center;
+	border-radius: 3px;
+	/*float: left;*/
+	margin: 20px 25% 50px 18%;
+	/*background-color:;*/
+}
+
+
+/*菜单激活后的样式*/
+
+.actived_color {
+	background: rgba(229, 249, 190);
+	color: black;
+	font-family: "黑体";
+	font-size: 20px;
+}
+#form_lg span{
+	position: relative;
+	float: left;
+	margin-top:20px;
+}
+.commenS{
+   -webkit-appearance: inherit;
+	-moz-appearance: inherit;
+	appearance: inherit;
+	outline: 0;
+	width:20px;
+	height:20px;
+	margin-left:30px;
+	margin-right:10px;
+	margin-top:20px;
+	padding:0px;
+	background: none;
+	float:left;
+	border:2px solid #1E90FF;
+	border-radius: 50%;
+}
+.commenS:focus{
+	background: rgba(0, 153, 255);
+}
